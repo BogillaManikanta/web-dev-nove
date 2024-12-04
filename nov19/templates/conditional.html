@@ -1,0 +1,9 @@
+{% block content %}
+
+{% if user.logged_in %}
+<h1>Welcome, {{user.name}}
+    {% else %}
+    <h1>Please Login to Continue
+</h1>
+{% endif %}
+{% endblock %}

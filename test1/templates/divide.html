@@ -1,0 +1,22 @@
+<head>
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <h1>Divide two numbers</h1>
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" -->
+    <form method="post">
+        <label for="num1">Number 1:</label>
+        <input type="text" name = "num1" id = "num1" required>
+        <label for="num2">Number 2:</label>
+        <input type="text" name = "num2" id = "num2" required>
+
+        <button type="submit">Divide</button>
+
+        {% if result is defined%}
+        <p>Result: {{result}}</p>
+        {% elif error is defined %}
+        <p style="color:red">Error:{{error}}</p>
+        {% endif %}
+    </form>
+</body>
